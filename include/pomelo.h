@@ -43,6 +43,8 @@ typedef struct pc_msg_s pc_msg_t;
 typedef struct pc_pkg_parser_s pc_pkg_parser_t;
 typedef uv_buf_t pc_buf_t;
 
+typedef void (*msg_progress_callback)(long total, long current);
+
 /**
  * State machine for Pomelo package parser
  */
@@ -289,6 +291,9 @@ struct pc_client_s {
   int reconnect_delay_max;
   int enable_exp_backoff;
   struct sockaddr_in addr;
+
+  //msg_progress_callback ptr
+  msg_progress_callback msg_progress;
 };
 
 /**
@@ -556,6 +561,13 @@ PC_EXTERN void pc_proto_init2(pc_client_t *client, pc_proto_cb proto_cb);
 PC_EXTERN void pc_proto_copy(pc_client_t *client, json_t *proto_ver, json_t *client_protos, json_t *server_protos);
 
 
+/**
+ *  set the callback for msg progress
+ *
+ * @param client    client instance.
+ * @param msg_progress_cb  callback when read or write proto files.
+ */
+PC_EXTERN void registerMsgProgressCB(pc_client_t * client, msg_progress_callback cb);
 
 /* Don't export the private CPP symbols. */
 #undef PC_TCP_REQ_FIELDS

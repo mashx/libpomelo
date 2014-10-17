@@ -183,6 +183,13 @@ static size_t pc__pkg_head(pc_pkg_parser_t *parser,
     parser->pkg_offset = 0;
     parser->pkg_size = pkg_len;
     parser->state = PC_PKG_BODY;
+
+    //notify package begin
+    if(parser->attach) {
+      pc_client_t *client = (pc_client_t *)parser->attach;
+      if(client->msg_progress)
+        client->msg_progress(parser->pkg_size,0);
+    }
   }
 
   return offset + len;
@@ -209,9 +216,23 @@ static size_t pc__pkg_body(pc_pkg_parser_t *parser,
 
   if(parser->pkg_offset == parser->pkg_size) {
     // if all the package finished
+    // callback for complete status
+    if(parser->attach) {
+      pc_client_t *client = (pc_client_t *)parser->attach;
+      if(client->msg_progress)
+      client->msg_progress(parser->pkg_size,parser->pkg_size);
+    }
+
     parser->cb((pc_pkg_type)pc__pkg_type(parser->head_buf),
                parser->pkg_buf, parser->pkg_size, parser->attach);
     pc_pkg_parser_reset(parser);
+  }else {
+    // package receive in progress
+    if(parser->attach) {
+      pc_client_t *client = (pc_client_t *)parser->attach;
+      if(client->msg_progress)
+        client->msg_progress(parser->pkg_size,parser->pkg_offset);
+    }
   }
 
   return offset + len;

@@ -143,6 +143,8 @@ void pc__client_init(pc_client_t *client) {
   client->encode_msg = pc__default_msg_encode_cb;
   client->encode_msg_done = pc__default_msg_encode_done_cb;
 
+  client->msg_progress = NULL;
+
   client->state = PC_ST_INITED;
 }
 
@@ -636,4 +638,13 @@ void pc_proto_copy(pc_client_t *client, json_t *proto_ver, json_t *client_protos
   client->proto_ver = proto_ver;
   client->client_protos = client_protos;
   client->server_protos = server_protos;
+}
+
+void registerMsgProgressCB(pc_client_t * client, msg_progress_callback cb) {
+  if (!client) {
+    fprintf(stderr, "Fail to copy protobuf info, one client is null.\n");
+    return;
+  }
+
+  client->msg_progress=cb;
 }

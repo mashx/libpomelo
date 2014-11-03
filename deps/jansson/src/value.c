@@ -331,6 +331,62 @@ json_t *json_array(void)
     return &array->json;
 }
 
+json_t *json_array_build_from_raw(char* arr, size_t length)
+{
+    size_t size, i;
+    json_array_t *array;
+
+    if(!arr || length <=0 )
+        return NULL;
+
+    size =  length%2 ? length+1 : length;
+
+    array = jsonp_malloc(sizeof(json_array_t));
+
+    if(!array)
+        return NULL;
+    json_init(&array->json, JSON_ARRAY);
+
+    array->entries = 0;
+    array->size = size;
+
+    array->table = jsonp_malloc(array->size * sizeof(json_t *));
+    if(!array->table) {
+        jsonp_free(array);
+        return NULL;
+    }
+
+    array->visited = 0;
+
+
+    for(i = 0; i < length; i++) {
+        array->table[i] = json_integer(arr[i]);
+        array->entries++;
+    }
+
+    return &array->json;
+}
+
+int json_array_extract_to_raw(json_t* json, char* out)
+{
+    size_t i;
+    json_array_t* array;
+
+    if(!out || json )
+        return -1;
+
+    if(!json_is_array(json))
+        return -1;
+
+    array = json_to_array(json);
+
+    for(i = 0; i < array->entries; i++) {
+        out[i] = json_integer_value(array->table[i]);
+    }
+
+    return 0;
+}
+
 static void json_delete_array(json_array_t *array)
 {
     size_t i;

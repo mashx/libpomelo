@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -129,7 +129,11 @@
 			};
 			buildConfigurationList = C635156A5F194EA1CB9516A7 /* Build configuration list for PBXProject "jansson" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = C8361E6324843A60143DB40A;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,7 +164,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1DA261209EEA4CE0DF72FF16 /* Default */ = {
+		D6F13DB619F0D3E5001CF399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Release;
+		};
+		D6F13DB719F0D3E5001CF399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -171,16 +185,30 @@
 				PRODUCT_NAME = jansson;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Default;
+			name = Release;
 		};
-		4F5020B0C0B824B12FA37E73 /* Default */ = {
+		D6F13DB819F0D3F2001CF399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
 			};
-			name = Default;
+			name = Debug;
+		};
+		D6F13DB919F0D3F2001CF399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = ./src;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = jansson;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -188,18 +216,20 @@
 		C635156A5F194EA1CB9516A7 /* Build configuration list for PBXProject "jansson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F5020B0C0B824B12FA37E73 /* Default */,
+				D6F13DB819F0D3F2001CF399 /* Debug */,
+				D6F13DB619F0D3E5001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		F13B635E2AABF08FB8A00924 /* Build configuration list for PBXNativeTarget "jansson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DA261209EEA4CE0DF72FF16 /* Default */,
+				D6F13DB919F0D3F2001CF399 /* Debug */,
+				D6F13DB719F0D3E5001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

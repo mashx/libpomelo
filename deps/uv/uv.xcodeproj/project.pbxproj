@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -284,7 +284,11 @@
 			};
 			buildConfigurationList = 8C5C4470AE99DE5DE330356A /* Build configuration list for PBXProject "uv" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = EFCF50CBF7C8374327DEF7A5;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,46 +358,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		19E0C09436AF887CB2DB6108 /* Default */ = {
+		D6F13DBA19F0D404001CF399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Release;
+		};
+		D6F13DBB19F0D404001CF399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = All;
 			};
-			name = Default;
+			name = Release;
 		};
-		2FE3A29655FA5BEB25CD8A73 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					_LARGEFILE_SOURCE,
-					"_FILE_OFFSET_BITS=64",
-					_GNU_SOURCE,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = uv_dtrace_provider;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Default;
-		};
-		6A82947FD00DAF0B48F35D4C /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					_LARGEFILE_SOURCE,
-					"_FILE_OFFSET_BITS=64",
-					_GNU_SOURCE,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = uv_dtrace_header;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Default;
-		};
-		A99C1EF3080BAD852B8D3E92 /* Default */ = {
+		D6F13DBC19F0D404001CF399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -415,16 +397,112 @@
 				PRODUCT_NAME = uv;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Default;
+			name = Release;
 		};
-		B7C8814BFAEC393AB8AEFC9B /* Default */ = {
+		D6F13DBD19F0D404001CF399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = uv_dtrace_header;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6F13DBE19F0D404001CF399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = uv_dtrace_provider;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6F13DBF19F0D40A001CF399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
 			};
-			name = Default;
+			name = Debug;
+		};
+		D6F13DC019F0D40A001CF399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		D6F13DC119F0D40A001CF399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+					HAVE_CONFIG_H,
+					"_DARWIN_USE_64_BIT_INODE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					include,
+					"include/uv-private",
+					src/,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = uv;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6F13DC219F0D40A001CF399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = uv_dtrace_header;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6F13DC319F0D40A001CF399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = uv_dtrace_provider;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -432,42 +510,47 @@
 		386E308BC55F6C0F2C320C07 /* Build configuration list for PBXAggregateTarget "uv_dtrace_provider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FE3A29655FA5BEB25CD8A73 /* Default */,
+				D6F13DC319F0D40A001CF399 /* Debug */,
+				D6F13DBE19F0D404001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		5296D8C95E00A782FB6ADF6C /* Build configuration list for PBXAggregateTarget "uv_dtrace_header" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A82947FD00DAF0B48F35D4C /* Default */,
+				D6F13DC219F0D40A001CF399 /* Debug */,
+				D6F13DBD19F0D404001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		8C5C4470AE99DE5DE330356A /* Build configuration list for PBXProject "uv" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7C8814BFAEC393AB8AEFC9B /* Default */,
+				D6F13DBF19F0D40A001CF399 /* Debug */,
+				D6F13DBA19F0D404001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		C25720DE719950FCE3D0A683 /* Build configuration list for PBXNativeTarget "libuv" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A99C1EF3080BAD852B8D3E92 /* Default */,
+				D6F13DC119F0D40A001CF399 /* Debug */,
+				D6F13DBC19F0D404001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		EB6C1E4AF282847509C3F777 /* Build configuration list for PBXAggregateTarget "All" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19E0C09436AF887CB2DB6108 /* Default */,
+				D6F13DC019F0D40A001CF399 /* Debug */,
+				D6F13DBB19F0D404001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

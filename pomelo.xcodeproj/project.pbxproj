@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		C4CE4FCFD2724FBA635C2375 /* package.c in Sources */ = {isa = PBXBuildFile; fileRef = 46838A97020ABE01515E9686 /* package.c */; };
 		CF8D91DCD259F8FE062D504E /* protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = AA7783075FCDBAF16776B1CB /* protocol.c */; };
 		D51D9E6D819185F176CC622C /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = D296F173D8BC2522D83B619B /* client.c */; };
+		D6F13DCA19F0D482001CF399 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F13DC819F0D482001CF399 /* libjansson.a */; };
+		D6F13DCB19F0D482001CF399 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F13DC919F0D482001CF399 /* libuv.a */; };
 		E0A93AF23B727E6A76D2F2BA /* network.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C152036C6CA6853783E4A65 /* network.c */; };
 		E898B052274F45D86CB2D71B /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C2B17D75D3EB57AA81E9D5F7 /* thread.c */; };
 		ECC5C9055E1256C576612E9D /* pkg-heartbeat.c in Sources */ = {isa = PBXBuildFile; fileRef = 669696E48600F36F9ACE5505 /* pkg-heartbeat.c */; };
@@ -55,6 +57,10 @@
 		C994BAB82106B6246CC5712C /* msg-pb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "msg-pb.c"; sourceTree = "<group>"; };
 		CD10CC580F21349EAA1C70F8 /* ngx-queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ngx-queue.h"; sourceTree = "<group>"; };
 		D296F173D8BC2522D83B619B /* client.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
+		D6F13DB219F0CCEE001CF399 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Default-iphoneos/libjansson.a"; sourceTree = "<group>"; };
+		D6F13DB319F0CCEE001CF399 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Default-iphoneos/libuv.a"; sourceTree = "<group>"; };
+		D6F13DC819F0D482001CF399 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Debug-iphoneos/libjansson.a"; sourceTree = "<group>"; };
+		D6F13DC919F0D482001CF399 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Debug-iphoneos/libuv.a"; sourceTree = "<group>"; };
 		D88068FDCABC80CA59FC5CD8 /* message.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = message.c; sourceTree = "<group>"; };
 		D990E2390368348ACD74503B /* listener.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = listener.c; sourceTree = "<group>"; };
 		E445EB4DD2E1486E2E4EF058 /* pb-decode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "pb-decode.c"; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F13DCA19F0D482001CF399 /* libjansson.a in Frameworks */,
+				D6F13DCB19F0D482001CF399 /* libuv.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +159,10 @@
 		D4A8831A12C91E54580ED81B = {
 			isa = PBXGroup;
 			children = (
+				D6F13DC819F0D482001CF399 /* libjansson.a */,
+				D6F13DC919F0D482001CF399 /* libuv.a */,
+				D6F13DB219F0CCEE001CF399 /* libjansson.a */,
+				D6F13DB319F0CCEE001CF399 /* libuv.a */,
 				F8C90E9105B06A7F24F5CB7C /* Source */,
 				4DA2F44512224E680626DFB8 /* Products */,
 				C2CD93A73B63EF926207EC38 /* Build */,
@@ -204,7 +216,11 @@
 			};
 			buildConfigurationList = 8507625DC7EBB8838C0F9137 /* Build configuration list for PBXProject "pomelo" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = D4A8831A12C91E54580ED81B;
 			projectDirPath = "";
 			projectRoot = "";
@@ -243,7 +259,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		425A415BE139F0AB0C7F212C /* Default */ = {
+		D6F13DC419F0D41C001CF399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Release;
+		};
+		D6F13DC519F0D41C001CF399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -262,19 +288,54 @@
 					deps/uv/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Default-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = pomelo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Default;
+			name = Release;
 		};
-		8DF114BE4D4C552186187042 /* Default */ = {
+		D6F13DC619F0D422001CF399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
 			};
-			name = Default;
+			name = Debug;
+		};
+		D6F13DC719F0D422001CF399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+					"_DARWIN_USE_64_BIT_INODE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					./include,
+					./deps/uv/include,
+					./deps/jansson/src,
+					deps/uv/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Default-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MolaTaskWorkspace-glsxxnelasqabkbshtimiceyahhb/Build/Products/Debug-iphoneos",
+				);
+				PRODUCT_NAME = pomelo;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -282,18 +343,20 @@
 		3694BBE08952ABD4A44FD0BB /* Build configuration list for PBXNativeTarget "libpomelo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				425A415BE139F0AB0C7F212C /* Default */,
+				D6F13DC719F0D422001CF399 /* Debug */,
+				D6F13DC519F0D41C001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		8507625DC7EBB8838C0F9137 /* Build configuration list for PBXProject "pomelo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8DF114BE4D4C552186187042 /* Default */,
+				D6F13DC619F0D422001CF399 /* Debug */,
+				D6F13DC419F0D41C001CF399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

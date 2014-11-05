@@ -172,8 +172,8 @@ int json_array_insert_new(json_t *array, size_t index, json_t *value);
 int json_array_remove(json_t *array, size_t index);
 int json_array_clear(json_t *array);
 int json_array_extend(json_t *array, json_t *other);
-json_t *json_array_build_from_raw(char* arr, size_t length);
-int json_array_extract_to_raw(json_t* json, char* out);
+json_t *json_array_build_from_raw(unsigned char* arr, size_t length);
+int json_array_extract_to_raw(json_t* json, unsigned char* out);
 
 static JSON_INLINE
 int json_array_set(json_t *array, size_t index, json_t *value)

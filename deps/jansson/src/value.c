@@ -331,7 +331,7 @@ json_t *json_array(void)
     return &array->json;
 }
 
-json_t *json_array_build_from_raw(char* arr, size_t length)
+json_t *json_array_build_from_raw(unsigned char* arr, size_t length)
 {
     size_t size, i;
     json_array_t *array;
@@ -367,7 +367,7 @@ json_t *json_array_build_from_raw(char* arr, size_t length)
     return &array->json;
 }
 
-int json_array_extract_to_raw(json_t* json, char* out)
+int json_array_extract_to_raw(json_t* json, unsigned char* out)
 {
     size_t i;
     json_array_t* array;

@@ -319,6 +319,7 @@ struct pc_request_s {
   uint32_t id;
   pc_request_cb cb;
   ngx_queue_t queue;
+  void* __context;
 };
 
 /**

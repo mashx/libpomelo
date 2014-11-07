@@ -372,7 +372,7 @@ int json_array_extract_to_raw(json_t* json, unsigned char* out)
     size_t i;
     json_array_t* array;
 
-    if(!out || json )
+    if(!out || !json )
         return -1;
 
     if(!json_is_array(json))

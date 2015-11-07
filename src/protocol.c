@@ -9,7 +9,7 @@
  */
 
 static void pc__process_response(pc_client_t *client, pc_msg_t *msg) {
-  1char req_id_str[64];
+  char req_id_str[64];
   memset(req_id_str, 0, 64);
   sprintf(req_id_str, "%u", msg->id);
 
